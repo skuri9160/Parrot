@@ -1,4 +1,7 @@
 {
+    "require-dev": {
+      "heroku/heroku-buildpack-php": "*"
+    },
     "require": {
         "linecorp/line-bot-sdk": "^3.13"
     }
