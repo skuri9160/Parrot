@@ -26,12 +26,12 @@ if(isset($_SERVER["HTTP_".HTTPHeader::LINE_SIGNATURE])){
 //大量にメッセージが送られると複数分のデータが同時に送られてくるため、foreachをしている。
   foreach($Events as $event){
     
-    $res = $bot->replyMessage($event->getReplyToken(), new TextMessageBuilder('メッセージが来たよ！'));
-    if ($res->isSucceeded()) {
-      error_log('success!!');
-    } else {
-      error_log("深刻な返信エラー" . $res->getHTTPStatus() . ' ' . $res->getRawBody());
-    }
+    // $res = $bot->replyMessage($event->getReplyToken(), new TextMessageBuilder('メッセージが来たよ！'));
+    // if ($res->isSucceeded()) {
+    //   error_log('success!!');
+    // } else {
+    //   error_log("深刻な返信エラー" . $res->getHTTPStatus() . ' ' . $res->getRawBody());
+    // }
   
   
     $SendMessage = new MultiMessageBuilder();
