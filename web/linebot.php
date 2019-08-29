@@ -20,7 +20,7 @@ if(isset($_SERVER["HTTP_".HTTPHeader::LINE_SIGNATURE])){
 
 //LINEBOTSDKの設定
   $httpClient = new CurlHTTPClient(ACCESS_TOKEN);
-  $Bot = new LINEBot($HttpClient, ['channelSecret' => SECRET_TOKEN]);
+  $Bot = new LINEBot($httpClient, ['channelSecret' => SECRET_TOKEN]);
   $signature = $_SERVER["HTTP_".HTTPHeader::LINE_SIGNATURE]; 
   $Events = $Bot->parseEventRequest($InputData, $Signature);
 
