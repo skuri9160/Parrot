@@ -22,7 +22,7 @@ if(isset($_SERVER["HTTP_".HTTPHeader::LINE_SIGNATURE])){
   $httpClient = new CurlHTTPClient(ACCESS_TOKEN);
   $Bot = new LINEBot($httpClient, ['channelSecret' => SECRET_TOKEN]);
   $signature = $_SERVER["HTTP_".HTTPHeader::LINE_SIGNATURE]; 
-  $Events = $Bot->parseEventRequest($InputData, $Signature);
+  $Events = $Bot->parseEventRequest($inputData, $signature);
 
 //大量にメッセージが送られると複数分のデータが同時に送られてくるため、foreachをしている。
   foreach($Events as $event){
