@@ -10,7 +10,7 @@ use \LINE\LINEBot\Constant\HTTPHeader;
 
 //LINESDKの読み込み
 // require_once(__DIR__."/vendor/autoload.php");
-require_once(__DIR__."../vendor/autoload.php");
+require_once("../vendor/autoload.php");
 
 //LINEから送られてきたらtrueになる
 if(isset($_SERVER["HTTP_".HTTPHeader::LINE_SIGNATURE])){
